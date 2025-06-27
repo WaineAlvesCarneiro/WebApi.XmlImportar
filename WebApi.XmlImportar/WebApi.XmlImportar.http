@@ -1,0 +1,17 @@
+@WebApi.XmlImportar_HostAddress = http://localhost:5240
+
+### Importar usuários via XML
+POST {{WebApi.XmlImportar_HostAddress}}/api/xml/user
+Accept: application/json
+Content-Type: application/json
+
+{}
+
+###
+
+### Importar cidades via XML
+POST {{WebApi.XmlImportar_HostAddress}}/api/xml/continents
+Accept: application/json
+Content-Type: application/json
+
+{}
