@@ -1,6 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Threading.Tasks;
 using System.Xml;
 using WebApi.XmlImportar.Data;
 using WebApi.XmlImportar.Models;
@@ -25,7 +23,7 @@ namespace WebApi.XmlImportar.Controllers
         {
             try
             {
-                var xmlFile = "D:/Projetos/Projeto.API/WebApi.XmlImportar/Xml/users.xml";
+                var xmlFile = "D:/Projetos/WebApi.XmlImportar/WebApi.XmlImportar/Xml/users.xml";
                 var doc = new XmlDocument();
                 doc.Load(xmlFile);
 
@@ -57,7 +55,7 @@ namespace WebApi.XmlImportar.Controllers
         {
             try
             {
-                var xmlFile = "D:/Projetos/Projeto.API/WebApi.XmlImportar/Xml/continents.xml";
+                var xmlFile = "D:/Projetos/WebApi.XmlImportar/WebApi.XmlImportar/Xml/continents.xml";
                 var doc = new XmlDocument();
                 doc.Load(xmlFile);
 
@@ -81,9 +79,10 @@ namespace WebApi.XmlImportar.Controllers
 
         #endregion
 
+        [HttpGet]
         public IActionResult Index()
         {
-            return View();
+            return Ok("Funcionando!");
         }
     }
 }
